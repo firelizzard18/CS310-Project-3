@@ -2,9 +2,6 @@
 //  solve_weight.c
 //  Project 3
 //
-//  Created by Ethan Reesor on 10/7/13.
-//  Copyright (c) 2013 Ethan. All rights reserved.
-//
 
 #include <stdio.h>
 #include <stdlib.h>
