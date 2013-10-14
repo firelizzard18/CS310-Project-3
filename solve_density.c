@@ -19,7 +19,6 @@ void solve_density(jewel_t * jewels, int W, int I) {
 
 	int total_weight = 0;
 	int total_value = 0;
-	int * used_indicies;
 
 	// Create a density array.
 	density_t * densities = malloc(I * sizeof(density_t));
