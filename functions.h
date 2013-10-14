@@ -9,5 +9,6 @@
 jewel_t * generate_jewel_case(int W, int I);
 
 void solve_weight(jewel_t * jewels, int W, int I);
+void solve_density(jewel_t * jewels, int W, int I);
 
 #endif
