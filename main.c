@@ -12,5 +12,6 @@ int main(int argc, char *argv[]) {
 	
 	jewel_t * jewels = generate_jewel_case(W, I);
 	
-	solve_weight(jewels, W, I);
+	// solve_weight(jewels, W, I);
+	solve_density(jewels, W, I);
 }
