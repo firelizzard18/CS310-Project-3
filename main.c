@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
-//#define DEBUG
-
 typedef void (*solve_func)(jewel_t *, int, int);
 
 double time_solve(jewel_t ** cases, int iter, int W, int I, solve_func func) {
