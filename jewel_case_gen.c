@@ -21,12 +21,16 @@ jewel_t * generate_jewel_case(int W, int I) {
 	// allocate the array
 	jewel_t * jewels = calloc(I, sizeof(jewel_t));
 	
+#ifdef DEBUG_OUTPUT
 	printf("Our jewels are (weight, value):\n");
+#endif
 	for (int i = 0; i < I; i++) {
 		jewels[i].weight = randint(W/2);
 		jewels[i].value = randint(W/2);
 		
+#ifdef DEBUG_OUTPUT
 		printf("%d: %d, %d\n", i + 1, jewels[i].weight, jewels[i].value);
+#endif
 	}
 	
 	return jewels;

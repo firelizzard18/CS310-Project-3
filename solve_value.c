@@ -81,7 +81,7 @@ void solve_value(jewel_t * jewels, int W, int I) {
 	column_t * head;
 	
 	int V;
-	for (column_t * last = NULL, * col; column_total(col, I); last = col) {
+	for (column_t * last = NULL, * col; column_total(last, I); last = col) {
 		col = alloc_column(I);
 		if (last) {
 			col->value = last->value + 1;
@@ -106,6 +106,7 @@ void solve_value(jewel_t * jewels, int W, int I) {
 				goto stop;
 stop:
 	
+#ifdef DEBUG_OUTPUT
 	printf("The min weight is %d using ", columns[vmax]->values[imax]);
 	for (int v = vmax, i = imax; v >= 0 && i >= 0; i--)
 		if (columns[v]->using[i]) {
@@ -115,6 +116,7 @@ stop:
 			v -= jewels[i].value;
 		}
 	printf("\n");
+#endif
 	
 	free_column(head);
 }

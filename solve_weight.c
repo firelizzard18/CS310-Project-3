@@ -72,6 +72,7 @@ void solve_weight(jewel_t * jewels, int W, int I) {
 			using[w][i] = solve_weight_sub(jewels, weights, w, i);
 	
 	// print out the result
+#ifdef DEBUG_OUTPUT
 	printf("The max value is %d using ", weights[W][I]);
 	for (int w = W, i = I; w > 0 && i > 0; i--)
 		if (using[w][i]) {
@@ -81,6 +82,7 @@ void solve_weight(jewel_t * jewels, int W, int I) {
 			w -= jewels[i].weight;
 		}
 	printf("\n");
+#endif
 	
 	// deallocate
 	for (int w = 0; w <= W; w++) {
