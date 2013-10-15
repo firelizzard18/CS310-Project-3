@@ -23,13 +23,10 @@ jewel_t * generate_jewel_case(int W, int I) {
 	
 	printf("Our jewels are (weight, value):\n");
 	for (int i = 0; i < I; i++) {
-		jewel_t * jewel = jewels + i;
+		jewels[i].weight = randint(W/2);
+		jewels[i].value = randint(W/2);
 		
-		// randomize, a value between 1 and W/2, inclusive
-		jewel->weight = randint(W/2 - 1) + 1;
-		jewel->value = randint(W/2 - 1) + 1;
-		
-		printf("%d: %d, %d\n", i + 1, jewel->weight, jewel->value);
+		printf("%d: %d, %d\n", i + 1, jewels[i].weight, jewels[i].value);
 	}
 	
 	return jewels;
