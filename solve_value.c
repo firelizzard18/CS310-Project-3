@@ -106,7 +106,7 @@ void solve_value(jewel_t * jewels, int W, int I) {
 				goto stop;
 stop:
 	
-	printf("The max value is %d using ", columns[vmax]->values[imax]);
+	printf("The min weight is %d using ", columns[vmax]->values[imax]);
 	for (int v = vmax, i = imax; v >= 0 && i >= 0; i--)
 		if (columns[v]->using[i]) {
 			if (v < vmax)
